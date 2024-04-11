@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Typing Test</title>
     <!-- import fontawesome -->
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../static/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,10 +15,14 @@
     <div class="container">
       <nav class="navbar">
         <div class="navbar-logo">
-          <img src="../images/logo.png" alt="Logo" height="100" />
+          <img src="../static/images/logo.png" alt="Logo" height="100" />
         </div>
         <h1 class="brand-title">Buna Time</h1>
-        <div class="navbar-content">Navbar Content</div>
+        <div class="navbar-content">
+          <a href="#">
+            <img src="../static/images/user (1).png" alt="user" height="40" />
+          </a>
+        </div>
       </nav>
       <div class="toolbar">
         <div class="toolbar-item">15</div>
@@ -33,11 +37,12 @@
         <!-- Add more toolbar items as needed -->
       </div>
       <div class="typing-text">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio quod
-        odit asperiores architecto animi accusantium sapiente, praesentium
-        recusandae officia natus adipisci, illo quia dolorem, mollitia fugiat
-        debitis quam facilis omnis.
+          {{paragraph}}
       </div>
+      <form id="typingForm" style="display: none;">
+        <input type="hidden" id="typingSpeed" name="typingSpeed" value="">
+        <input type="hidden" id="accuracy" name="accuracy" value="">
+      </form>
       <footer class="footer">
         <a class="footer-left-side">
           <i class="fab fa-github"></i>
